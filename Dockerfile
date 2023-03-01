@@ -47,7 +47,10 @@ RUN git lfs install \
 	&& git clone https://huggingface.co/sentence-transformers/all-distilroberta-v1 /app/transformer_models/all-distilroberta-v1 \
 	&& git clone https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 /app/transformer_models/all-MiniLM-L6-v2
 
-ADD matlab-install.tar.gz /tmp/
+RUN cd /tmp && \
+	wget https://gla-my.sharepoint.com/:u:/g/personal/h_narvala_1_research_gla_ac_uk/Eb5Jm48Dd-ZIiAvHrYSdHTQBs_5LLR5TFGvnn1FNXJG36w?download=1 -O matlab-install.tar.gz && \
+	tar -xvzf /tmp/matlab-install.tar.gz
+
 COPY matlab_installer_input.txt /tmp/matlab_installer_input.txt
 RUN cd /tmp/matlab-install/ && \
     chmod +x ./install && \

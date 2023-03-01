@@ -1,0 +1,7 @@
+{
+  "alpha"             : 10,
+  "gamma"             : 0.1,
+  "max_common_ent"    : 5,
+  "max_ent_bet"       : 5,
+  "weight_threshold"  : 0.7
+}

@@ -1,0 +1,30 @@
+{
+  "parent":      {
+                    "source_dir"      : "/app/92Folder",
+                    "target_dir"      : "/app/DocumentSets",
+                    "nltk_dir"        : "/app/nltk_data",
+                    "transformer_dir" : "/app/transformer_models"
+                 },
+
+   "dependents": {
+                    "emb_dir"                     : {"parent": "target_dir",  "name": "embeddings"},
+                    "data5w1h_dir"                : {"parent": "target_dir",  "name": "5w1h"},
+                    "threads_dir"                 : {"parent": "target_dir",  "name": "threads"},
+                    "seqint_dir"                  : {"parent": "target_dir",  "name": "seqint"},
+                    "hint_dir"                    : {"parent": "target_dir",  "name": "hint"},
+                    "dpp_dir"                     : {"parent": "target_dir",  "name": "dpp"},
+                    "thread_sample_dir"           : {"parent": "target_dir",  "name": "sampling"},
+
+                    "passage_dict_file"           : {"parent": "target_dir",  "name": "passages.jsonl.gz"},
+                    "passage_docids_file"         : {"parent": "target_dir",  "name": "passage_doc_ids.txt.gz"},
+                    "passage_parts_file"          : {"parent": "target_dir",  "name": "passages_parts.txt"},
+                    "date_dict_file"              : {"parent": "target_dir",  "name": "date_date.txt.gz"},
+                    "data5w1h_dict_file"          : {"parent": "data5w1h_dir","name": "data_5w1h.json.gz"},
+                    "entity_dict_file"            : {"parent": "data5w1h_dir","name": "who_where_entities.json.gz"},
+                    "date_features_file"          : {"parent": "data5w1h_dir","name": "dt_feat.npz"},
+                    "data5w1h_docids_file"        : {"parent": "data5w1h_dir","name": "data_5w1h_docids.txt.gz"},
+                    "data5w1h_parts_file"         : {"parent": "data5w1h_dir","name": "data_5w1h_parts.txt"},
+                    "passage_tfidf_features_file" : {"parent": "emb_dir",     "name": "psg_tfidf_features.txt.gz"},
+                    "passage_tfidf_emb_file"      : {"parent": "emb_dir",     "name": "psg_tfidf_emb.npz"}
+                }
+}
