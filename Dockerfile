@@ -58,7 +58,7 @@ RUN cd /tmp/matlab-install/ && \
         -inputFile /tmp/matlab_installer_input.txt \
         -outputFile /tmp/mlinstall.log \
         -destinationFolder /usr/local/MATLAB \
-    ; EXIT=$? && cat /tmp/mlinstall.log && test $EXIT -eq 0 && rm -rf /tmp/matlab-install/
+    ; EXIT=$? && cat /tmp/mlinstall.log && test $EXIT -eq 0 && rm -rf /tmp/matlab-install/ && echo "done"
     
 COPY startmatlab.sh /opt/startscript/
 RUN chmod +x /opt/startscript/startmatlab.sh && \
