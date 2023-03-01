@@ -84,5 +84,3 @@ RUN cd /app && chmod 777 `find . -type d`  && chmod 666 `find . -type f` && chmo
 EXPOSE 8888
 
 COPY docker_startup.sh /tmp/
-
-CMD bash -c "sh /tmp/docker_startup.sh cicero"
