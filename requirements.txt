@@ -1,0 +1,17 @@
+pandas
+python_dateutil >= 2.6.1
+python-docx
+numpy
+scikit-learn == 0.22.2.post1
+statsmodels
+torch
+transformers
+sentence-transformers
+spacy==2.3.7
+benepar
+matplotlib
+networkx
+giveme5w1h
+geopy==1.13.0
+cupy-cuda102
+cdlib[C]
