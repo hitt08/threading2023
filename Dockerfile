@@ -64,11 +64,8 @@ COPY startmatlab.sh /opt/startscript/
 RUN chmod +x /opt/startscript/startmatlab.sh && \
     ln -s /usr/local/MATLAB/bin/matlab /usr/local/bin/matlab
 
-RUN useradd -ms /bin/bash matlab && mkdir /etc/sudoers.d && echo "matlab ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/matlab \
-    && chmod 0440 /etc/sudoers.d/matlab
-
-
 COPY license.lic /usr/local/MATLAB/licenses/  
+RUN cd /usr/local/MATLAB/extern/engines/python/ && python3 setup.py install #--prefix="/local/work/matlab20bPy36"
 
 ENV TOKENIZERS_PARALLELISM=false
 WORKDIR /app
